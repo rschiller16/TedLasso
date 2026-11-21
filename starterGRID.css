@@ -1,0 +1,131 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #edf1f5;
+    color: #172b4d;
+    line-height: 1.6;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 180px 1fr 250px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 16px;
+    padding: 16px;
+}
+
+header {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    background-color: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+    border-bottom: 8px solid #b52b36;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+nav {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 20px;
+    background-color: #172b4d;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 12px;
+}
+
+nav a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+nav a:hover,
+nav a:focus,
+nav a[aria-current="page"] {
+    background-color: #f6d65b;
+    color: #172b4d;
+}
+
+article {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    min-width: 0;
+    padding: 24px;
+    background-color: white;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.believe {
+    background-color: #f6d65b;
+    border: 3px solid #172b4d;
+    padding: 16px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+aside {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    padding: 20px;
+    background-color: #f6e7af;
+    border-top: 6px solid #b52b36;
+}
+
+footer {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+    background-color: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    header, nav, article, aside, footer {
+        grid-column: 1 / 2;
+        grid-row: auto;
+    }
+}
